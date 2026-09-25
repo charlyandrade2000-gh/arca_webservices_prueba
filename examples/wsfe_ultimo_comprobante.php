@@ -5,7 +5,7 @@
 //   tipos comunes: 1 = Factura A, 6 = Factura B, 11 = Factura C
 
 $config = require __DIR__ . '/bootstrap.php';
-$tipo = isset($argv[1]) ? (int) $argv[1] : 6;
+$tipo = isset($argv[1]) ? (int) $argv[1] : 11;
 
 try {
     $wsfe = new Arca\Wsfe(new Arca\Wsaa($config));

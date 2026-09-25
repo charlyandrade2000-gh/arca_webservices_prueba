@@ -50,8 +50,8 @@ punto de venta de tipo *Factura Electrónica - Monotributo/RI - Web Services* en
 
 ```bash
 php examples/wsfe_dummy.php                   # estado de los servidores
-php examples/wsfe_ultimo_comprobante.php 6    # último número de Factura B
-php examples/wsfe_factura_b.php               # emite una Factura B de prueba y obtiene el CAE
+php examples/wsfe_ultimo_comprobante.php 11   # último número de Factura C
+php examples/wsfe_factura_c.php               # emite una Factura C de prueba y obtiene el CAE
 php examples/padron_consulta.php 20111111112 a13
 php examples/padron_consulta.php 20111111112 a5
 ```
@@ -65,8 +65,8 @@ $config = require 'config/config.php';
 $wsaa = new Arca\Wsaa($config);
 
 $wsfe = new Arca\Wsfe($wsaa);
-$ultimo = $wsfe->ultimoComprobante(1, 6);
-$r = $wsfe->autorizarSiguiente(1, 6, $detalle);   // ['resultado', 'cae', 'cae_vto', 'numero', 'observaciones']
+$ultimo = $wsfe->ultimoComprobante(1, 11);
+$r = $wsfe->autorizarSiguiente(1, 11, $detalle);   // ['resultado', 'cae', 'cae_vto', 'numero', 'observaciones']
 $tiposIva = $wsfe->parametros('FEParamGetTiposIva');
 
 $padron = new Arca\Padron($wsaa, 'a5');
