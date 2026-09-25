@@ -1,0 +1,17 @@
+{
+    "name": "charlyandrade2000/arca-webservices",
+    "description": "Clientes PHP para los web services de ARCA (WSAA, WSFEv1, Padrón)",
+    "type": "project",
+    "license": "proprietary",
+    "require": {
+        "php": ">=7.4",
+        "ext-openssl": "*",
+        "ext-simplexml": "*",
+        "ext-soap": "*"
+    },
+    "autoload": {
+        "psr-4": {
+            "Arca\\": "src/"
+        }
+    }
+}

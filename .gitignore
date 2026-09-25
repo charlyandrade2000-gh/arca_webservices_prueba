@@ -1,0 +1,6 @@
+/vendor/
+/config/config.php
+/certs/*
+!/certs/.gitkeep
+/var/*
+!/var/.gitkeep
